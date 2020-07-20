@@ -1,0 +1,49 @@
+<style>
+    .container {
+        /* width: 500px; */
+        display: flex;
+        justify-content: center;
+    }
+
+    .btn {
+        background-color: rgba(1, 28, 55, 0);
+        color: #15DEA5;
+        border: solid 4px #011c37;
+        border-radius: 10rem;
+        cursor: pointer;
+        font-size: 3rem;
+        overflow: hidden;
+        padding: 1.85rem 3rem;
+        position: relative;
+        /* untuk mentransisikan semua yang berubah pada hover */
+
+        /* transition: all 450ms; */
+
+        /* untuk mentransisikan property yang di inginkan saja */
+
+        /* transition: transform 450ms, background-color 300ms; */
+
+        /* transition-delay berfungsi untuk menunda transisi berdasarkan waktu yang ditentukan */
+
+        /* cara pertama */
+        /* kita akan mendelay hanya pada transisi background color */
+
+        /* transition-delay: 0ms, 150ms; */
+
+        /* cara kedua */
+        /* menaruhnya di transition setelah transition-duration */
+
+        transition: transform 450ms, background-color 300ms 150ms;
+    }
+
+    .btn:hover {
+        transform: scale(1.13);
+        background-color: rgba(1, 28, 55, 1);
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="btn">Hover Over Me</div>
+    </div>
+</body>

@@ -1,0 +1,39 @@
+<style>
+    .form .form__group input {
+        border: 2px solid #dddddd;
+        border-radius: 100rem;
+        color: #6300a0;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2.5rem;
+        outline: none;
+        padding: .5rem 1.5rem;
+        width: 100%;
+        transition: background-color 500ms;
+    }
+
+    .form .form__group input:focus {
+        border: 2px solid #6300a0;
+    }
+
+    /* kode ini akan berjalan jika kondisi pada focus adalah false */
+    .form .form__group input:not(:focus):invalid {
+        background: #b20a37;
+        border: 2px solid #b20a37;
+        color: #fff;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="form">
+            <div class="form__group">
+                <label for="">email</label>
+                <input type="email" name="" id="">
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- *note -->
+<!-- :focus berfungsi untuk input jika kita berada pada input -->
+<!-- :invalid berfungsi jika ketentuan html pada input bernilai salah -->

@@ -1,0 +1,40 @@
+<style>
+    .btn {
+        background: #011c37;
+        color: #15DEA5;
+        font-size: 3rem;
+        cursor: pointer;
+        padding: 1.85rem 3rem;
+        border-radius: 10rem;
+        position: absolute;
+        top: 320px;
+        left: 40px;
+    }
+
+    .btn:active+.ball {
+        transform: scale(1.15);
+    }
+
+    .ball {
+        width: 300px;
+        height: 300px;
+        background: greenyellow;
+        margin-bottom: 1rem;
+        border-radius: 150px;
+        transform: scale(0.1);
+        transition: transform 4000ms;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="btn">
+            Grow!
+        </div>
+        <div class="ball"></div>
+    </div>
+</body>
+
+<!-- *note -->
+<!-- :active bernilai true jika kita menekan element class btn -->
+<!-- syarat ngetrigger element lain adalah elemen lain itu harus dibawah element yang akan kita gunakan untuk ngetrigger -->
