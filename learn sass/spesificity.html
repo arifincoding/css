@@ -1,0 +1,70 @@
+<!-- urutan browser memilih kekhususan -->
+<!-- 1.gaya inline -->
+<!-- 2.id -->
+<!-- 3.class -->
+<!-- 4.element -->
+
+<!-- 1 -->
+<style>
+    #submit-button1 {
+        background-color: #15DEA5;
+    }
+
+    .button1 {
+        background-color: #DB464B;
+    }
+</style>
+<!-- apapun yang terjadi id pasti menang -->
+<div id="submit-button1" class="button1">
+    Click Here1!
+</div>
+<!-- 2 -->
+<style>
+    #submit-button2 {
+        background-color: #15DEA5;
+    }
+
+    /* jika pengen class yang menang maka */
+    #submit-button2.button2 {
+        background-color: #DB464B;
+    }
+</style>
+
+<div id="submit-button2" class="button2">
+    Click Here2!
+</div>
+
+<!-- 3 -->
+
+<style>
+    .submit3 {
+        background-color: #15DEA5;
+    }
+
+    /* class button menang karena berada di posisi bawah */
+    .button3 {
+        background-color: #DB464B;
+    }
+</style>
+
+ 
+<div class="button3 submit3">
+
+    Click Here3!
+
+</div>
+
+<style>
+    .button4 {
+        background-color: #DB464B;
+    }
+
+    /* class submit menang karena di posisi  bawah */
+    .submit4 {
+        background-color: #15DEA5;
+    }
+</style>
+
+<div class="button4 submit4">
+    Click Here4!
+</div>

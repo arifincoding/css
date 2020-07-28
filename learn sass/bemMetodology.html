@@ -1,0 +1,57 @@
+<!-- untuk mempermudah maintenace css kita bisa menggunakan metodology bem (block, element, modifier) -->
+
+<!-- setiap class anak dari class induk harus diberi format nama-class-induk__nama-class-anak -->
+
+<!-- setiap kita mengganti property dari suatu class harus diberi format nama-class-yang-diganti--nama-property-yang-diganti -->
+
+<!-- contoh -->
+<style>
+    body {
+        background-color: black;
+        display: flex;
+    }
+
+    /* induk dari block */
+    .proj-prev {
+        color: #fff;
+        margin-bottom: .25rem;
+        margin-right: 1rem;
+    }
+
+    /* anak dari block */
+    .proj-prev__heading {
+        font-size: 4rem;
+        padding-left: 2.5rem;
+        margin: 0;
+        line-height: 6rem;
+    }
+
+    .proj-prev__image {
+        width: 25rem;
+    }
+
+    .proj-prev__byline {
+        font-size: 1rem;
+        padding-left: 2.5rem;
+        margin: 0;
+    }
+
+    /* jika kita ingin mengganti property color dari class proj-prev dengan warna mint*/
+    .proj-prev--mint {
+        color: #15dea5;
+    }
+</style>
+
+<body>
+    <section class="proj-prev">
+        <img class="proj-prev__image" src="https://images4.alphacoders.com/959/thumb-350-959615.jpg" alt="ichigo">
+        <h1 class="proj-prev__heading">Project Title</h1>
+        <p class="proj-prev__byline">Project keywords would go here</p>
+    </section>
+
+    <section class="proj-prev proj-prev--mint">
+        <img class="proj-prev__image" src="https://images4.alphacoders.com/959/thumb-350-959615.jpg" alt="ichigo">
+        <h1 class="proj-prev__heading">Project Title</h1>
+        <p class="proj-prev__byline">Project keywords would go here</p>
+    </section>
+</body>

@@ -1,0 +1,24 @@
+<!-- menstyling anak yang dipilih dari selector yang dipilih -->
+<!-- berbeda dengan child selector yang hanya berefek pada turunan langsung dari selector yang dipilih, maka descendant juga berefek pada seluruh anak yang berada di dalam induk yang di pilih-->
+
+<style>
+    /* menstyling seluruh tag li yang ada didalam class nav */
+    /* menerapkan prinsip parent and child */
+    /* menstyling seluruh li walaupun nested li */
+    .nav li {
+        color: green;
+    }
+</style>
+
+<ul class="nav">
+    <li>1.hfasjkfasj</li>
+    <li>1.hfasjkfasj</li>
+    <li>1.hfasjkfasj</li>
+    <ul>
+        <li>1.hfasjkfasj</li>
+        <li>1.hfasjkfasj</li>
+        <li>1.hfasjkfasj</li>
+    </ul>
+    <li>1.hfasjkfasj</li>
+    <li>1.hfasjkfasj</li>
+</ul>

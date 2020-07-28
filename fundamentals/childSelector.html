@@ -1,0 +1,24 @@
+<!-- child selector berfungsi untuk menstyling anak dari tag yang dipilih -->
+
+<!-- contoh -->
+<style>
+    /* menstyling seluruh tag li yang ada didalam class nav */
+    /* menerapkan prinsip parent and child */
+    /* hanya li yang berhubungan langsung dengan class nav jika didalamnya ada nested li maka li pada nested tidak di styling */
+    .nav>li {
+        color: green;
+    }
+</style>
+
+<ul class="nav">
+    <li>1.hfasjkfasj</li>
+    <li>1.hfasjkfasj</li>
+    <li>1.hfasjkfasj</li>
+    <ul>
+        <li>1.hfasjkfasj</li>
+        <li>1.hfasjkfasj</li>
+        <li>1.hfasjkfasj</li>
+    </ul>
+    <li>1.hfasjkfasj</li>
+    <li>1.hfasjkfasj</li>
+</ul>
