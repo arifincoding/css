@@ -1,0 +1,11 @@
+{
+  "name": "loop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "loop": "sass ./loop.scss:./loop.css"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,56 @@
+// dengan loop kita bisa menggunakan setiap nilai pada map tanpa harus memanggilnya berulang kali
+// format pada loop adalah @each $key, $value in $map{}
+
+// contoh 1
+
+$colour-primary: #15DEA5;
+$colour-secondary: #001534;
+$colour-accent: #D6FFF5;
+$colour-white: #fff;
+$colour-invalid: #DB464B;
+
+$txt-input-palatte:(active:(bg:$colour-primary, border:$colour-primary, txt:$colour-white),
+    focus:(bg:$colour-primary, border:$colour-primary, txt:$colour-white),
+    invalid:(bg:$colour-invalid, border:$colour-white, txt:$colour-white));
+
+@mixin txt-input-palatte($palattes) {
+
+    @each $state,
+    $palatte in $palattes {
+
+        // note #{$state} merupakan interpolasi sass agar nilai variabel dapat digunakan dalam string
+        &:#{$state} {
+            border: .1rem solid map-get($palatte, border);
+            background-color: map-get($palatte, bg);
+            color: map-get($palatte, txt);
+        }
+    }
+}
+
+.form {
+    &__field {
+        input {
+            @include txt-input-palatte($txt-input-palatte);
+        }
+    }
+}
+
+// contoh 2
+
+$btn-mods:(greenn: $colour-primary, redd:$colour-invalid);
+
+@mixin btn-mods($mods) {
+
+    @each $mod,
+    $val in $mods {
+
+        // note #{$mod} merupakan interpolasi sass agar nilai variabel dapat digunakan dalam string
+        &--#{$mod} {
+            background-color: $val;
+        }
+    }
+}
+
+.button {
+    @include btn-mods($btn-mods);
+}
