@@ -1,0 +1,12 @@
+{
+  "name": "tipe_data_tingkat_lanjut",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "daftar": "sass --watch ./variable_list.scss:./variable_list.css",
+    "map": "sass ./variable_maps.scss:./variable_maps.css"
+  },
+  "author": "",
+  "license": "ISC"
+}

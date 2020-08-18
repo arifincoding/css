@@ -1,0 +1,11 @@
+.form__heading label {
+  font-size: 2rem;
+}
+
+.button {
+  border: 0.1rem solid #15DEA5;
+  background-color: #15DEA5;
+  color: #fff;
+}
+
+/*# sourceMappingURL=variable_maps.css.map */

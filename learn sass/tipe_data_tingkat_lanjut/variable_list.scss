@@ -1,0 +1,34 @@
+// pembuat daftar(array) pada variable sass
+
+// untuk format pembuatan daftar/list ada 4 cara yaitu
+
+// note bisa pilih salah satu
+
+// 1
+$syntax-01: 1rem 2rem 3rem 4rem;
+// 2
+$syntax-02: 1rem,
+2rem,
+3rem,
+4rem;
+// 3
+$syntax-03: (1rem 2rem 3rem 4rem);
+// 4
+$syntax-04: (1rem, 2rem, 3rem, 4rem);
+
+// untuk pemanggilannya ada 2 cara
+
+// cara 1 jika anda ingin menggunakan semua nilai dalam list untuk 1 property
+
+.button {
+    border: 1px solid;
+    padding: $syntax-01; //maka menghasilkan css padding: 1rem 2rem 3rem 4rem;
+}
+
+// cara 2 jika anda ingin menggunakan salah satu dari daftar nilai pada variable
+
+// format nth($variable,index); note: index dimulai dari angka 1
+
+.heading {
+    font-size: nth($syntax-03, 3); // maka menghasilkan css font-size:3rem;
+}

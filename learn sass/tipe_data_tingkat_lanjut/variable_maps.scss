@@ -1,0 +1,41 @@
+// berbeda dengan list pada variable maps setiap nilai pada list diberi kata kunci / key
+
+// untuk format penulisanya $variable:(key:value,key:value);
+// contoh
+$font-size:(logo:7rem, project-heading:4rem, label:2rem);
+
+// untuk pemanggilannya menggunakan format map-get($variable,key);
+.form {
+    &__heading {
+        label {
+            font-size: map-get($font-size, label)
+        }
+    }
+}
+
+// variable map bersarang
+// kita bisa menggunakan map didalam map seperti halnya selector pada sass
+
+// contoh
+$colour-primary: #15DEA5;
+$colour-secondary: #001534;
+$colour-accent: #D6FFF5;
+$colour-white: #fff;
+$colour-invalid: #DB464B;
+
+$txt-input-palatte:(active:(bg:$colour-primary, border:$colour-primary, txt:$colour-white),
+    focus:(bg:$colour-primary, border:$colour-primary, txt:$colour-white),
+    invalid:(bg:$colour-invalid, border:$colour-white, txt:$colour-white));
+
+// untuk mempermudah pemanggilannya kita dapat menggunakan @mixin
+
+@mixin txt-input-palatte($state) {
+    $palatte: map-get($txt-input-palatte, $state);
+    border: .1rem solid map-get($palatte, border);
+    background-color: map-get($palatte, bg);
+    color: map-get($palatte, txt);
+}
+
+.button {
+    @include txt-input-palatte(focus);
+}
