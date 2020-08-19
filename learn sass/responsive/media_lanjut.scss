@@ -1,0 +1,38 @@
+// kita juga dapat membuat magic dengan menggunakan variable map , mixin dan @content
+
+$breakpoint:(mobile:599px);
+
+@mixin mobile-only {
+    @media screen and (max-width: map-get($breakpoint, mobile)) {
+        @content;
+    }
+}
+
+// dengan penerapan ini mixin bisa dipanggil disemua selector dengan isi apa saja yang di inginkan
+
+// contoh
+
+.proj-grid {
+    display: grid;
+    width: 70%;
+
+    // @content pada @mixin otomatis diganti dengan isi didalam {}
+    @include mobile-only {
+        width: 100%;
+    }
+
+    // maka pada resolusi kurang dari 599 width akan berubah menjadi 100%
+}
+
+.heading {
+    font-size: 5rem;
+
+    // @content pada @mixin otomatis diganti dengan isi didalam {}
+    @include mobile-only {
+        font-size: 1rem;
+    }
+
+    // maka pada resolusi kurang dari 599 font-size akan berubah menjadi 1rem
+}
+
+// jadi dengan menerapkan metode ini kita bisa lebih mudah memahami kode kita dan juga mempercepat pengerjaan project

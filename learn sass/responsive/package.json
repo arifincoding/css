@@ -1,0 +1,12 @@
+{
+  "name": "responsive",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "media": "sass ./media_breakpoint.scss:./media_breackpoint.css",
+    "mediaLanjut": "sass ./media_lanjut.scss:./media_lanjut.css"
+  },
+  "author": "",
+  "license": "ISC"
+}

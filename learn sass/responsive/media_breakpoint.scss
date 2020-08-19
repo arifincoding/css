@@ -1,0 +1,10 @@
+// pada saas media bisa ditaruh pada selector
+
+.proj-grid {
+    width: 50%;
+    background-color: blue;
+
+    @media(max-width: 599px) {
+        width: 100%;
+    }
+}

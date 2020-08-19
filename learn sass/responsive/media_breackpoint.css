@@ -1,0 +1,11 @@
+.proj-grid {
+  width: 50%;
+  background-color: blue;
+}
+@media (max-width: 599px) {
+  .proj-grid {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=media_breackpoint.css.map */
